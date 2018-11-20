@@ -1,0 +1,154 @@
+<!DOCTYPE html "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html dir="Practic" lang="ru">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>My site</title>
+<script src="scripts/jquery.js"></script>
+<style>
+#temnota1 {
+        background: rgba(1, 1, 1, 0.725);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+  }
+#okno1 {
+        width: 300px;
+        height: 550px;
+        text-align: center;
+        padding: 15px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 50px auto;
+        background: #8891ab99;
+}
+#temnota1:target {display: block;}
+
+#temnota2 {
+        background: rgba(1, 1, 1, 0.725);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+}
+#okno2 {
+        width: 300px;
+        height: 550px;
+        text-align: center;
+        padding: 15px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 50px auto;
+        background: #8891ab99;
+}
+#temnota2:target {display: block;}
+
+.close {
+        display: inline-block;
+        color: red;
+        position: relative;
+        top: 0px;
+        text-decoration: none;
+        font-size: 14pt;
+        cursor:pointer;
+        float: right;
+}
+.close:hover {background: #8891ab99;}
+body {
+    margin: 0;
+    height: 100%;
+}
+#header {
+    height: 180px;
+}
+#navigation{
+	background: #686262e6;
+	height: 40px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+	font-size: 16px;
+	line-height: 40px;
+    position: relative;
+}
+#navigation.fixed{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: #686262e6;
+}
+#navigation ul{
+    width: 1180px;
+	padding-left: 0;
+	margin: 0 auto;
+    display: block;
+}
+#menu li{
+	float: left;
+	list-style: none;
+	padding: 0 25px;
+	border-right: 1px solid #333;
+}
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Verdana;
+}
+#menu>li a:hover{
+	color: #656565;
+	transition: color 0.5s ease;
+}
+</style>
+
+<script>
+	jQuery(function($) {
+		$(window).scroll(function(){
+			if($(this).scrollTop()>1){
+				$('#navigation').addClass('fixed');
+			}
+			else if ($(this).scrollTop()<1){
+				$('#navigation').removeClass('fixed');
+			}});});
+</script>
+</head>
+
+<body background="images/background.jpg">
+<meta charset="utf-8">
+<div id="temnota2">
+ <div id="okno2">
+    <a href="#" class="close">X</a>
+<form method="get" action="other/result.html">
+   <button type="submit">Структура Html</button>
+</form>
+
+</div>
+</div>
+<div id="temnota1">
+ <div id="okno1">
+    <a href="#" class="close">X</a>
+<p>
+ <form method="get" action="work\Структура_Html.docx">
+    <button type="submit">Структура Html</button>
+ </form>
+</p>
+</div>
+<!--потом сюда-->
+ </div>
+</div>
+<div id="header">
+    <div id="navigation">
+        <ul id="menu">
+            <li><a href="#temnota1">Все темы</a></li>
+            <li><a href="#temnota2">Результаты</a></li>
+        </ul>
+    </div>
+</div>
+
+</body></html>
